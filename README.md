@@ -1,7 +1,7 @@
 # ValidateLongWord
 In the LongestWord class, I declared two String variables, for storing each word of a sentence temporarily, for storing the longest word.
 
-Similarly, I defined integer variables, storing the length of the temporary word, and initialized with the length of the original string with 0. Because whatever there word in the sentence, its length will always be greater than 0. However, I've word pattern validation and also null is not allowed too.
+Similarly, I defined integer variables, storing the length of the temporary word, and initialized with the length of the original string with 0. Because whenever there are words in the sentence, its length will always be greater than 0. However, I've word pattern validation and ways to validate null value is not allowed too.
 
 The technique used for taking out words from the sentence one at a time is that we extract all characters one by one and add them to a temporary String variable until I get a space. I we get a space, we know that a word has ended.
 

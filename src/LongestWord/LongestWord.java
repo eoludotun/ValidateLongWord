@@ -14,15 +14,16 @@ public class LongestWord {
 
 	public String validateMaxWord(String countWord) {
 			
-		  if (countWord == null || countWord.isEmpty()) {
-	            throw new IllegalArgumentException("Sentence can not be null or empty, please try again");
-	        }  	       
-		        counWordValid(countWord);
-			    countWord = countWord+" "; //adding a space at the end, to extract the last word also
-                int len=countWord.length(); //finding the length of the sentence
-                char ch;
- 
-                for(int i=0;i<len;i++)
+	 if (countWord == null || countWord.isEmpty()) 
+	 {
+	    throw new IllegalArgumentException("Sentence can not be null or empty, please try again");
+	 }
+         counWordValid(countWord);  //pattern validation	
+		
+	 countWord = countWord+" "; //adding a space at the end, to extract the last word also
+	 int len=countWord.length(); //finding the length of the sentence
+	 char ch;
+         for(int i=0;i<len;i++)
                 {
                  ch=countWord.charAt(i); //extracting characters of the string one at a time
                  if(ch!=' ')
@@ -42,8 +43,8 @@ public class LongestWord {
                    }                
                 }
                 return maxWord + maxlength;
-    }
-	
+	}
+       
 	public int getmaxlength() {
 		return maxlength;
 	}
@@ -52,7 +53,8 @@ public class LongestWord {
 		return maxWord;
 	}
 	
-    private boolean counWordValid(String sentence) {
-        return sentence.matches("^[a-zA-Z].*[a-zA-Z][.!?]$");              
-    }	
+        private boolean counWordValid(String sentence) {
+        return sentence.matches("^[a-zA-Z].*[a-zA-Z][.!?]$");  
+	}
 }
+
